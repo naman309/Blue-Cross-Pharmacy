@@ -1,0 +1,110 @@
+<!-- Group Members :
+1. Naman Sharma (8837689)
+2. Nidhi Bhuva (8874998) -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Page</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- FontAwesome -->
+  <script src="https://kit.fontawesome.com/4031b26978.js" crossorigin="anonymous"></script>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <style>
+    footer {
+      height: 71px;
+    }
+
+    .footer_marg div {
+      color: yellow;
+    }
+
+    #homepage-title {
+      color: yellow;
+    }
+
+    .Inserted {
+      font-weight: bolder;
+      font-size: 66px;
+      margin-top: 150px;
+      margin-bottom: 150px;
+      background-color: pink;
+      /* height: 252px; */
+      text-align: center;
+      font-style: italic;
+    }
+  </style>
+  <div class="container flex heading">
+    <header>
+      <h1 id="homepage-title">BlueCross Patient Form</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="./patientsList.php">Patient</a></li>
+
+        <li><a href="./pharmacy.html">Pharmacy</a></li>
+
+        <li><a href="./doctors.html">Doctors</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <form name="frmContact" method="post" action="patients.php">
+    <div class="patientPhp">
+      <div class="phFlex">
+        <label class="phLabel" for="Name">Name </label>
+        <input type="text" class="form-control" name="txtMedicine" id="txtMedicine" placeholder="Name" value=""
+          pattern="[A-Za-z]+" required>
+      </div>
+      <div class="phFlex">
+        <label class="phLabel" for="DOB">DOB</label>
+        <input type="date" class="form-control" name="txtDOB" id="txtDOB" placeholder="DOB" value="" required>
+      </div>
+      <div class="phFlex">
+        <label class="phLabel" for="phone">Phone</label>
+        <input type="text" class="form-control" name="txtPhone" id="txtPhone" placeholder="Phone" value=""
+          pattern="[1-9]+" required>
+      </div>
+      <div class="phFlex">
+        <label class="phLabel" for="Address">Address</label>
+        <textarea name="txtAddress" class="form-control" id="txtAddress" placeholder="Address" required></textarea>
+      </div>
+      <div class="phFlex">
+        <label class="phLabel" for="Prescription">Prescription</label>
+        <textarea name="txtPrescription" class="form-control" id="txtPrescription" placeholder="Prescription"
+          required></textarea>
+      </div>
+      <div class="phFlex">
+        <input type="submit" name="Submit" id="Submit" value="Click me to add patients"
+          class="btn btn-primary btn-lg btn-block">
+      </div>
+    </div>
+  </form>
+  </fieldset>
+  </div>
+  <footer>
+    <div class="container">
+      <div class=" footer_marg">
+
+        <div>&copy;Naman Sharma (8837689)</div>
+        <div>&copy;Nidhi Bhuva (8874998)</div>
+
+
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

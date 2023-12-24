@@ -1,0 +1,112 @@
+<!-- Group Members :
+1. Naman Sharma (8837689)
+2. Nidhi Bhuva (8874998) -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor View</title>
+  <link rel="stylesheet" href="./style.css">
+  <!-- FontAwesome -->
+  <script src="https://kit.fontawesome.com/4031b26978.js" crossorigin="anonymous"></script>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <style>
+    .footer_marg div {
+      color: yellow;
+    }
+
+    footer {
+      height: 71px;
+    }
+
+    #homepage-title {
+      color: yellow;
+    }
+  </style>
+  <div class="container flex heading">
+    <header>
+      <h1 id="homepage-title">BlueCross Doctor Form</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="./patientsList.php">Patient</a></li>
+
+        <li><a href="./pharmacy.html">Pharmacy</a></li>
+
+        <li><a href="./doctors.html">Doctors</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="pageH" id="run">
+    <form name="frmContact" method="post" action="./doctors.php">
+      <div class="patientPhp">
+        <div class="fsize">
+          <input type="button" name="Submit" id="id1" value="Zoom+" onclick="increaseFontSize()"
+            class="btn btn-primary btn-lg btn-block fontB">
+          <input type="button" name="Submit" id="id1" value="Zoom-" onclick="decreaseFontSize()"
+            class="btn btn-primary btn-lg btn-block fontB">
+        </div>
+        <div class="phFlex">
+          <label class="phLabel" for="Doctor_Name">Doctors Name </label>
+          <input type="text" class="form-control" name="txtDocName" id="txtDocName" placeholder="Doctor Name" value=""
+            pattern="[a-zA-Z]+" required>
+
+        </div>
+        <div class="phFlex">
+          <label class="phLabel" for="Doctor_Specialization">Doctor Specialization</label>
+          <input type="text" class="form-control" name="txtSpecilization" id="txtSpecilization"
+            placeholder="Doctor Specialization" value="" pattern="[a-zA-Z]+" required>
+        </div>
+
+        <div class="phFlex">
+          <label class="phLabel" for="Doctor_Experience">Doctor Experience</label>
+          <input type="text" class="form-control" name="txtExperience" id="txtExperience"
+            placeholder="Doctor Experience" value="" pattern="^[0-9]+$" required>
+        </div>
+        <div>
+          <input type="submit" name="Submit" id="Submit" value="Click me to add Doctor"
+            class="btn btn-primary btn-lg btn-block">
+        </div>
+      </div>
+    </form>
+
+
+  </div>
+  <footer>
+    <div class="container">
+      <div class=" footer_marg">
+        <div>&copy;Naman Sharma (8837689)</div>
+        <div>&copy;Nidhi Bhuva (8874998)</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function increaseFontSize() {
+      txt = document.getElementById('run');
+      style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
+      currentSize = parseFloat(style);
+      txt.style.fontSize = (currentSize + 1) + 'px';
+    }
+    function decreaseFontSize() {
+      txt = document.getElementById('run');
+      style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
+      currentSize = parseFloat(style);
+      txt.style.fontSize = (currentSize - 1) + 'px';
+    }
+  </script>
+</body>
+
+</html>
